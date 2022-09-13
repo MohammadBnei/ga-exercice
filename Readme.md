@@ -23,11 +23,28 @@ For this part, you will have to trigger the workflow under specific conditions. 
 3. Every Tuesday at 3am
 
 ### Push & PR
-1. *Create two job inside a new workflow*
-2. When there is a push, execute both job
-3. When there is a PR, execute only the first job
+1. *Create two jobs inside a new workflow*
+2. When you have a push, execute both job
+3. When you have a PR, execute only the first job.
+4. *Create a **dev** branch, and inside it create a dummy change.txt file. Put your name in it. Publish this branch*
+5. Create a pull request from the **dev** branch to **main**. You should see the first job executing directly inside the PR (from the github UI)
 
 ### Manual & Custom
-1. When you click on the corresponding button in the UI
-2. *Create two workflow*
+1. When you click on *run workflow* button in the UI
+2. *Create two workflows*
 3. Trigger the second workflow from the first one, and pass the github event name from the first one to the second with a variable named "firstJobEvent"
+
+## Troubleshooting tools & logs
+Install the [nektos/act](https://github.com/nektos/act) tool to run your workflows locally.
+
+1. *Once **act** is installed, run the command from your cli (`act`) and let it download the docker image it needs.*
+2. *Create a new repository secret called **ACTIONS_STEP_DEBUG** and set its value to true*
+3. Re-run your last workflow from the github action UI
+4. Get a particular line from the job's output and extract a link that points to that line. Save it in a result.
+5. Download the logs for an entire job
+6. *Create a new repository secret called **ACTIONS_RUNNER_DEBUG** and set its value to true*
+7. *Remove the **ACTIONS_STEP_DEBUG** secret*
+8. Re-run the last workflow
+9. Download the logs from the latest job, and compare the two debug mode. What's the major difference ?
+
+
