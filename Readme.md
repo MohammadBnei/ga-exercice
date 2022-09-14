@@ -7,11 +7,11 @@ For this part, you will have to trigger the workflow under specific conditions. 
 
 ### Push
 1. *Create and publish 3 branches, "dev", "staging", "feat/feature-1"*
-3. When you have a push on the branch "dev" only
-4. When you have a push on any branch **except** "staging"
-5. When you have a push on any branch where the name starts with "feat"
-6. When only the files with a ts extension have been modified
-7. When a specific folder have been modified
+2. When you have a push on the branch "dev" only
+3. When you have a push on any branch **except** "staging"
+4. When you have a push on any branch where the name starts with "feat"
+5. When only the files with a ts extension have been modified
+6. When a specific folder have been modified
 
 
 ### Pull request
