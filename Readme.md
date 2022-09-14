@@ -10,6 +10,8 @@ For this part, you will have to trigger the workflow under specific conditions. 
 3. When you have a push on the branch "dev" only
 4. When you have a push on any branch **except** "staging"
 5. When you have a push on any branch where the name starts with "feat"
+6. When only the files with a ts extension have been modified
+7. When a specific folder have been modified
 
 
 ### Pull request
