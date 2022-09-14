@@ -1,7 +1,39 @@
 name: Events exercices
 
 on:
-  workflow_dispatch:
+  # Push
+  push:
+    branches: 
+      # Push 2
+      - dev
+    # # Push 3
+      - '!staging'
+    # OR (Push 3)
+    # branches-ignore:
+    #   - staging
+      # Push 4
+      - 'feat*'
+    # Push 5
+    paths:
+      - "*.ts"
+      # Push 6
+      - "$FOLDER/*"
+  
+  # PR
+  pull_request:
+    types:
+    # PR 1
+      - opened
+    # PR 2
+      - closed
+
+  # Scheduled
+  schedule:
+    # Scheduled 1
+    - '*/1 * * * *'
+    # Scheduled 2
+    - '*/1 * * * *'
+  
 
 jobs:
   print-event:
