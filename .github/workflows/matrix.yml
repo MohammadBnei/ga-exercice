@@ -3,6 +3,7 @@ on:
 
 jobs:
   example_matrix:
+    continue-on-error: true
     strategy:
       matrix:
         version: [12, 14, 16]
