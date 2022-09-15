@@ -1,0 +1,15 @@
+name: Push Exercices
+
+on:
+  push:
+    branches:
+      - 'dev'
+      - 'staging'
+      - 'feat**'
+
+jobs:
+  echo-smtg:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo MY COMMAND IS PRINTED
