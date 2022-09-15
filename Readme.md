@@ -56,7 +56,7 @@ Here, you will have to compose with the runner to achieve the demanded results. 
 
 ### Job's default
 
-1. Write a workflow that installs dependancies and runs the test. Specify a default folder for all the runs inside the job.
+1. Write a workflow that installs dependancies and runs the test. Specify a default folder for all the steps inside the job.
 
 
 ### Matrix 
