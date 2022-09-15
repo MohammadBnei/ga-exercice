@@ -6,6 +6,8 @@ on:
       - 'dev'
       - 'staging'
       - 'feat**'
+    path:
+      - '*.ts'
 
 jobs:
   echo-smtg:
