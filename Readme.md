@@ -67,3 +67,19 @@ Here, you will have to compose with the runner to achieve the demanded results. 
 ### Docker image runner
 1. Now, instead of installing node js with the action, use a node image for the tests of the node-app
 
+### Self-hosted runners
+1. Download the [self-hosted runner script](https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners) 
+2. Create a workflow that will install the node dependancies, test and run the app (`npm start`)
+3. Look at the result from the job. Why is this a bad idea for public repositories ?
+
+## Environnements
+
+1. In your repo's settings, create two environnements. One for production, one for staging.
+2. Write a workflow that deploy the joke app to heroku on a push to the main branch
+3. Write a workflow that deploy the joke app to heroku on a push to the dev branch (on a different heroku app)
+4. For each workflow, specify the corresponding environnement and the url of the app you created
+5. For the production environnement, set the following secret : `JOKE_URL=https://v2.jokeapi.dev/joke/Programming`
+6. For the staging environnement, set the following secret : `JOKE_URL=https://v2.jokeapi.dev/joke/Any?blacklistFlags=racist,sexist`
+7. Use the secret to incorporate different joke url depending on the environnement ([Help](https://github.com/marketplace/actions/deploy-to-heroku#procfile-passing))
+
+
