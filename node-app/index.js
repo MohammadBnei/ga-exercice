@@ -1,9 +1,5 @@
 console.log("A very basic node js app");
 
-function sum(a, b) {
-  return a + b;
-}
-
 const osu = require("node-os-utils");
 const cpu = osu.cpu;
 
@@ -22,5 +18,3 @@ const drive = osu.drive;
 drive.info().then((info) => {
   console.log(info);
 });
-
-module.exports = sum;
