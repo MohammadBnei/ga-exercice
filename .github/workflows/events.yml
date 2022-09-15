@@ -2,8 +2,8 @@ name: Events exercises
 
 on:
   push:
-    branches-ignore:
-      - "staging"
+    branches:
+      - "feat/**"
 
 jobs:
   print-event:
