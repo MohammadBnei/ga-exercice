@@ -20,7 +20,7 @@ For this part, you will have to trigger the workflow under specific conditions. 
 
 ### Scheduled
 [Help](https://crontab.guru)
-1. Every minutes
+1. Every 5 minutes
 2. Every 1h 30m
 3. Every Tuesday at 3am
 
