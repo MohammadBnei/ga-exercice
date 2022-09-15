@@ -3,7 +3,9 @@ name: Push Exercices
 on:
   push:
     branches:
+      - 'dev'
       - 'staging'
+      - 'feat**'
     paths:
       - '**.ts'
 
