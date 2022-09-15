@@ -52,11 +52,18 @@ Install the [nektos/act](https://github.com/nektos/act) tool to run your workflo
 
 ## Runners
 
-Here, you will have to compose with the runner to achieve the demanded results.
+Here, you will have to compose with the runner to achieve the demanded results. A node app has been added, in the `node-app` directory
+
+### Job's default
+
+1. Write a workflow that installs dependancies and runs the test. Specify a default folder for all the runs inside the job.
+
 
 ### Matrix 
 
 1. Create a matrix strategy for a node js app that will install dependancies for node 12, 14, 16
 2. Create a second matrix strategy to test the node app on ubuntu and windows
-3. third
+
+### Docker image runner
+1. Now, instead of installing node js with the action, use a node image for the tests of the node-app
 
