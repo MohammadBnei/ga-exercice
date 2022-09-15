@@ -16,3 +16,12 @@ jobs:
 
     steps:
       - run: echo MY COMMAND IS PRINTED
+
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  specific_review_requested:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'A review from octo-team was requested'
