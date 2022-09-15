@@ -1,8 +1,9 @@
 name: Events exercises
 
 on:
-  pull_request:
-    types: [closed]
+  schedule:
+    # Every minute
+    - cron: "*/1 * * * *"
 
 jobs:
   print-event:
