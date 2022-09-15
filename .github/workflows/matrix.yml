@@ -5,6 +5,10 @@ jobs:
   example_matrix:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: node-app
+
     container:
       image: node:16
     steps:
