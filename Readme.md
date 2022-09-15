@@ -50,4 +50,13 @@ Install the [nektos/act](https://github.com/nektos/act) tool to run your workflo
 9. Download the logs from the latest job, and compare the two debug mode. What's the major difference ?
 10. Run your workflow with act. Don't forget to specify the event type.
 
+## Runners
+
+Here, you will have to compose with the runner to achieve the demanded results.
+
+### Matrix 
+
+1. Create a matrix strategy for a node js app that will install dependancies for node 12, 14, 16
+2. Create a second matrix strategy to test the node app on ubuntu and windows
+3. third
 
