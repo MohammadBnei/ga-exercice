@@ -1,9 +1,8 @@
 name: Events exercises
 
 on:
-  push:
-    paths:
-      - "src/**"
+  pull_request:
+    types: [opened]
 
 jobs:
   print-event:
