@@ -1,4 +1,4 @@
-name: Events exercices
+name: Events exercises
 
 on:
   workflow_dispatch:
