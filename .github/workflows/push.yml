@@ -2,10 +2,8 @@ name: Push Exercices
 
 on:
   push:
-    # branches:
-    #   - 'dev'
-    #   - 'staging'
-    #   - 'feat**'
+    branches:
+      - 'staging'
     path:
       - '**.ts'
 
