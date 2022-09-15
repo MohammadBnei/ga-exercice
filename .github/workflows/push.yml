@@ -7,7 +7,7 @@ on:
       - 'staging'
       - 'feat**'
     path:
-      - '*.ts'
+      - '**.ts'
 
 jobs:
   echo-smtg:
