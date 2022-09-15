@@ -3,7 +3,7 @@ name: Events exercises
 on:
   push:
     paths:
-      - "**.ts"
+      - "src/**"
 
 jobs:
   print-event:
