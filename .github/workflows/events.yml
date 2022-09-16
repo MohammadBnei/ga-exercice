@@ -16,12 +16,12 @@ name: Events exercices
 # on: # When someone creates a PR
 #   pull_request:
 #     types: ["opened"]
-on: # When someone closed a PR
-  pull_request:
-    types: ["closed"]
-# on: # Every minutes
-#   schedule:
-#     - cron: 1 * * * *
+# on: # When someone closed a PR
+#   pull_request:
+#     types: ["closed"]
+on: # Every minutes
+  schedule:
+    - cron: 1 * * * *
 # on: # Every 1h 37m 12s
 #   schedule:
 #     - cron: 12/37 */1 * * *
