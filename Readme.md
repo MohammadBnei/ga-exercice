@@ -20,7 +20,7 @@ For this part, you will have to trigger the workflow under specific conditions. 
 
 ### Scheduled
 [Help](https://crontab.guru)
-1. Every minutes
+1. Every 5 minutes
 2. Every 1h 30m
 3. Every Tuesday at 3am
 
@@ -49,5 +49,37 @@ Install the [nektos/act](https://github.com/nektos/act) tool to run your workflo
 8. Re-run the last workflow
 9. Download the logs from the latest job, and compare the two debug mode. What's the major difference ?
 10. Run your workflow with act. Don't forget to specify the event type.
+
+## Runners
+
+Here, you will have to compose with the runner to achieve the demanded results. A node app has been added, in the `node-app` directory
+
+### Job's default
+
+1. Write a workflow that installs dependancies and runs the test. Specify a default folder for all the steps inside the job.
+
+
+### Matrix 
+
+1. Create a matrix strategy for a node js app that will install dependancies for node 12, 14, 16
+2. Create a second matrix strategy to test the node app on ubuntu and windows
+
+### Docker image runner
+1. Now, instead of installing node js with the action, use a node image for the tests of the node-app
+
+### Self-hosted runners
+1. Download the [self-hosted runner script](https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners) 
+2. Create a workflow that will install the node dependancies, test and run the app (`npm start`)
+3. Look at the result from the job. Why is this a bad idea for public repositories ?
+
+## Environnements
+
+1. In your repo's settings, create two environnements. One for production, one for staging.
+2. Write a workflow that deploy the joke app to heroku on a push to the main branch
+3. Write a workflow that deploy the joke app to heroku on a push to the dev branch (on a different heroku app)
+4. For each workflow, specify the corresponding environnement and the url of the app you created
+5. For the production environnement, set the following secret : `JOKE_URL=https://v2.jokeapi.dev/joke/Programming`
+6. For the staging environnement, set the following secret : `JOKE_URL=https://v2.jokeapi.dev/joke/Any?blacklistFlags=racist,sexist`
+7. Use the secret to incorporate different joke url depending on the environnement ([Help](https://github.com/marketplace/actions/deploy-to-heroku#procfile-passing))
 
 
