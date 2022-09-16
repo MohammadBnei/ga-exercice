@@ -13,12 +13,12 @@ name: Events exercices
 #   push:
 #     branches:
 #       - "feat/*"
-on: # When someone creates a PR
-  pull_request:
-    types: ["opened"]
-# on: # When someone closed a PR
+# on: # When someone creates a PR
 #   pull_request:
-#     types: ["closed"]
+#     types: ["opened"]
+on: # When someone closed a PR
+  pull_request:
+    types: ["closed"]
 # on: # Every minutes
 #   schedule:
 #     - cron: 1 * * * *
