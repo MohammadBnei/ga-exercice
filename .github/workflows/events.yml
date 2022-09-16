@@ -19,15 +19,18 @@ name: Events exercices
 # on: # When someone closed a PR
 #   pull_request:
 #     types: ["closed"]
-on: # Every minutes
+on: 
+  push:
+   branches:
+      - dev
+      - "feat/*"
+      - "!staging"
+  pull_request:
+    types: ["opened","closed"]
   schedule:
-    - cron: '*/6 * * * *'
-# on: # Every 1h 37m 12s
-#   schedule:
-#     - cron: 12/37 */1 * * *
-# on: # Every Tuesday at 3am
-#   schedule:
-#     - cron: 0 3 * * 2
+    - cron: '*/6 * * * *' # Every minutes
+    - cron: '12/37 */1 * * *' # Every 1h 37m 12s
+    - cron: '0 3 * * 2' # Every Tuesday at 3am
 
 jobs:
   print-event:
