@@ -1,0 +1,18 @@
+name: Target for call from another workflow
+
+on:
+  repository_dispatch:
+    types: [MyCustomEventName]
+
+jobs:
+  print-event:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print the event that triggered this workflow
+        run: |
+          echo ${{ github.event_name }}
+
+      - name: Print the current time
+        run: |
+          echo $(date)
