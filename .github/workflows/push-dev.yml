@@ -1,14 +1,9 @@
-name: Events exercices
+name: Push Dev
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - 'dev'
-      - 'feat/**'
-      - '!statging'
-    paths:
-      - '**.ts' #When ts file is pushed
 
 jobs:
   print-event:
@@ -22,4 +17,3 @@ jobs:
       - name: Print the current time
         run: |
           echo $(date)
-

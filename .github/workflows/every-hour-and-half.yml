@@ -1,14 +1,9 @@
-name: Events exercices
+name: Every hour and a half
 
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - 'dev'
-      - 'feat/**'
-      - '!statging'
-    paths:
-      - '**.ts' #When ts file is pushed
+  schedule:
+    - cron: '0 0-21/3 * * *'
+    - cron: '30 1-22/3 * * *'
 
 jobs:
   print-event:
@@ -22,4 +17,3 @@ jobs:
       - name: Print the current time
         run: |
           echo $(date)
-

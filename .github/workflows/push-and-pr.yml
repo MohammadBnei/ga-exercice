@@ -1,0 +1,34 @@
+name: Push Or PR
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  print-event:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print the event that triggered this workflow
+        run: |
+          echo ${{ github.event_name }}
+
+      - name: Print the current time
+        run: |
+          echo $(date)
+
+  print-event2:
+    if: github.event_name != 'pull_request'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print the event that triggered this workflow
+        run: |
+          echo ${{ github.event_name }}
+
+      - name: Print the current time
+        run: |
+          echo $(date)
+
+
