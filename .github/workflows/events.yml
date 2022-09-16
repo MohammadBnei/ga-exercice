@@ -1,7 +1,33 @@
 name: Events exercices
 
-on:
-  workflow_dispatch:
+on: # When you have a push on the branch "dev" only
+  push:
+    branches:
+      - dev
+# on: # When you have a push on any branch except "staging"
+#   push:
+#     branches:
+#       - "**"
+#       - "!staging"
+# on: # When you have a push on any branch where the name starts with "feat"
+#   push:
+#     branches:
+#       - "feat/s*"
+# on: # When someone creates a PR
+#   pull_request:
+#     types: ["opened"]
+# on: # When someone closed a PR
+#   pull_request:
+#     types: ["closed"]
+# on: # Every minutes
+#   schedule:
+#     - cron: 1 * * * *
+# on: # Every 1h 37m 12s
+#   schedule:
+#     - cron: 12/37 */1 * * *
+# on: # Every Tuesday at 3am
+#   schedule:
+#     - cron: 0 3 * * 2
 
 jobs:
   print-event:
