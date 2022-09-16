@@ -21,7 +21,7 @@ name: Events exercices
 #     types: ["closed"]
 on: # Every minutes
   schedule:
-    - cron: */6 * * * *
+    - cron: '*/6 * * * *'
 # on: # Every 1h 37m 12s
 #   schedule:
 #     - cron: 12/37 */1 * * *
