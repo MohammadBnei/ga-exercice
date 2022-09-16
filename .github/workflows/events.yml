@@ -9,13 +9,13 @@ name: Events exercices
 #     branches:
 #       - "**"
 #       - "!staging"
-on: # When you have a push on any branch where the name starts with "feat"
-  push:
-    branches:
-      - "feat/*"
-# on: # When someone creates a PR
-#   pull_request:
-#     types: ["opened"]
+# on: # When you have a push on any branch where the name starts with "feat"
+#   push:
+#     branches:
+#       - "feat/*"
+on: # When someone creates a PR
+  pull_request:
+    types: ["opened"]
 # on: # When someone closed a PR
 #   pull_request:
 #     types: ["closed"]
