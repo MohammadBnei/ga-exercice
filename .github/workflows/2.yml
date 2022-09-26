@@ -13,12 +13,12 @@ jobs:
         version: [14, 16]
         os: [ubuntu-latest]
         experimental: [false]
-        include:
-          # add matrix strategy with specific configuration
-          - version: 12
-            experimental: true
-          - os: windows-latest
-            experimental: true
+        # include:
+        #   # add matrix strategy with specific configuration
+        #   - version: 12
+        #     experimental: true
+        #   - os: windows-latest
+        #     experimental: true
 
     continue-on-error: ${{ matrix.experimental }}
     runs-on: ${{ matrix.os }}
