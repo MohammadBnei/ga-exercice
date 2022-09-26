@@ -1,0 +1,25 @@
+name: Self hosted runner
+
+on:
+  push:
+
+jobs:
+  build-test:
+    runs-on: self-hosted
+
+    defaults:
+      run:
+        working-directory: node-app
+
+    steps:
+      - uses: actions/checkout@v3
+      # No need to install nodejs as it is already installed locally
+      - name: Install dependencies
+        run: |
+          npm ci
+      - name: Test
+        run: |
+          npm test
+      - name: Start the app
+        run: |
+          npm start

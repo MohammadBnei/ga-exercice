@@ -1,0 +1,22 @@
+name: Docker image runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    container:
+      image: node:16
+
+    defaults:
+      run:
+        working-directory: node-app
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          npm ci

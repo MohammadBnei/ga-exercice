@@ -1,0 +1,24 @@
+2022-09-26T11:02:26.3834560Z Current runner version: '2.296.2'
+2022-09-26T11:02:26.3866350Z Runner name: 'Mohas-MacBook-Pro'
+2022-09-26T11:02:26.3867900Z Runner group name: 'Default'
+2022-09-26T11:02:26.3871650Z Machine name: 'Mohas-MacBook-Pro'
+2022-09-26T11:02:26.4041500Z ##[group]GITHUB_TOKEN Permissions
+2022-09-26T11:02:26.4043200Z Actions: write
+2022-09-26T11:02:26.4043510Z Checks: write
+2022-09-26T11:02:26.4043830Z Contents: write
+2022-09-26T11:02:26.4044090Z Deployments: write
+2022-09-26T11:02:26.4044350Z Discussions: write
+2022-09-26T11:02:26.4044600Z Issues: write
+2022-09-26T11:02:26.4044840Z Metadata: read
+2022-09-26T11:02:26.4045080Z Packages: write
+2022-09-26T11:02:26.4045330Z Pages: write
+2022-09-26T11:02:26.4045650Z PullRequests: write
+2022-09-26T11:02:26.4045990Z RepositoryProjects: write
+2022-09-26T11:02:26.4046280Z SecurityEvents: write
+2022-09-26T11:02:26.4046550Z Statuses: write
+2022-09-26T11:02:26.4046790Z ##[endgroup]
+2022-09-26T11:02:26.4052050Z Secret source: Actions
+2022-09-26T11:02:26.4053790Z Prepare workflow directory
+2022-09-26T11:02:26.5612790Z Prepare all required actions
+2022-09-26T11:02:26.5769410Z Getting action download info
+2022-09-26T11:02:26.9645400Z Download action repository 'actions/checkout@v3' (SHA:2541b1294d2704b0964813337f33b291d3f8596b)

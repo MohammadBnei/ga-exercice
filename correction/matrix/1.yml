@@ -1,0 +1,26 @@
+name: Matrix 1
+
+on:
+  # Manual
+  workflow_dispatch:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [12, 14, 12]
+
+    defaults:
+      run:
+        working-directory: node-app
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.version }}
+
+      - name: Install dependencies
+        run: |
+          npm ci

@@ -1,0 +1,13 @@
+2022-09-26T11:02:33.6904760Z Post job cleanup.
+2022-09-26T11:02:33.8316840Z [command]/opt/homebrew/bin/git version
+2022-09-26T11:02:33.8467270Z git version 2.37.3
+2022-09-26T11:02:33.8526270Z Copying '/Users/moha/.gitconfig' to '/Users/moha/Code/action-runner/_work/_temp/5e827189-178d-4ebc-8ff8-99da9e7027ff/.gitconfig'
+2022-09-26T11:02:33.8547870Z Temporarily overriding HOME='/Users/moha/Code/action-runner/_work/_temp/5e827189-178d-4ebc-8ff8-99da9e7027ff' before making global git config changes
+2022-09-26T11:02:33.8551520Z Adding repository directory to the temporary git global config as a safe directory
+2022-09-26T11:02:33.8559280Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/moha/Code/action-runner/_work/ga-exercice/ga-exercice
+2022-09-26T11:02:33.8732320Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2022-09-26T11:02:33.8896670Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2022-09-26T11:02:34.0468000Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-09-26T11:02:34.0585200Z http.https://github.com/.extraheader
+2022-09-26T11:02:34.0618180Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+2022-09-26T11:02:34.0751230Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :

@@ -1,0 +1,36 @@
+name: Push 6
+
+on: 
+  push:
+    branches:
+    # * is anything but "/"
+    # * does not handle recusrivity, ex: a change to app/index.ts  will not trigger this workflow but a change to ./index.ts will
+      - "app/*"
+    # ** is anything including "/"
+    # ** does handle recusrivity, ex: a change to app/index.ts, or app/src/index.ts will trigger this workflow
+    # Here the "/" matters, otherwise any change to a folder or a file starting with "app" will trigger this workflow (ex: a app.config in the root directory will be detected for this workflow)
+      - "app/**"
+
+jobs:
+  print-event:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print the event that triggered this workflow
+        run: |
+          echo ${{ github.event_name }}
+
+      - name: Print the current time
+        run: |
+          echo $(date)
+
+  second-job:
+    runs-on: ubuntu-latest
+    # Push & PR 3
+    if: ${{github.event_name == 'push'}}
+
+    steps:
+      - name: Deploy dummy
+        run: echo Deploying now ...
+      - name: Finishing Deploy dummy
+        run: echo Deployment OK ✅

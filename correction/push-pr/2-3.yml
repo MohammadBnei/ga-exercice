@@ -1,0 +1,30 @@
+name: Push - PR 2 & 3
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  print-event:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print the event that triggered this workflow
+        run: |
+          echo ${{ github.event_name }}
+
+      - name: Print the current time
+        run: |
+          echo $(date)
+
+  second-job:
+    runs-on: ubuntu-latest
+    # Push & PR 3
+    # This condition can be put inside the job, or for any step
+    if: ${{github.event_name == 'push'}}
+
+    steps:
+      - name: Deploy dummy
+        run: echo Deploying now ...
+      - name: Finishing Deploy dummy
+        run: echo Deployment OK ✅

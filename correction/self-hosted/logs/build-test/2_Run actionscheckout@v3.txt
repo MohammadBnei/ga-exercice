@@ -1,0 +1,93 @@
+2022-09-26T11:02:28.4917530Z ##[group]Run actions/checkout@v3
+2022-09-26T11:02:28.4918720Z with:
+2022-09-26T11:02:28.4918930Z   repository: MohammadBnei/ga-exercice
+2022-09-26T11:02:28.4919490Z   token: ***
+2022-09-26T11:02:28.4919660Z   ssh-strict: true
+2022-09-26T11:02:28.4919830Z   persist-credentials: true
+2022-09-26T11:02:28.4919990Z   clean: true
+2022-09-26T11:02:28.4920200Z   fetch-depth: 1
+2022-09-26T11:02:28.4920350Z   lfs: false
+2022-09-26T11:02:28.4920510Z   submodules: false
+2022-09-26T11:02:28.4920680Z   set-safe-directory: true
+2022-09-26T11:02:28.4920860Z ##[endgroup]
+2022-09-26T11:02:28.8782650Z Syncing repository: MohammadBnei/ga-exercice
+2022-09-26T11:02:28.8790200Z ##[group]Getting Git version info
+2022-09-26T11:02:28.8791490Z Working directory is '/Users/moha/Code/action-runner/_work/ga-exercice/ga-exercice'
+2022-09-26T11:02:28.8792590Z [command]/opt/homebrew/bin/git version
+2022-09-26T11:02:28.8792850Z git version 2.37.3
+2022-09-26T11:02:28.8897430Z ##[endgroup]
+2022-09-26T11:02:28.9020200Z Copying '/Users/moha/.gitconfig' to '/Users/moha/Code/action-runner/_work/_temp/5333ecf4-43d0-4610-862c-cd9a1cb9cced/.gitconfig'
+2022-09-26T11:02:28.9021300Z Temporarily overriding HOME='/Users/moha/Code/action-runner/_work/_temp/5333ecf4-43d0-4610-862c-cd9a1cb9cced' before making global git config changes
+2022-09-26T11:02:28.9147000Z Adding repository directory to the temporary git global config as a safe directory
+2022-09-26T11:02:28.9148120Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/moha/Code/action-runner/_work/ga-exercice/ga-exercice
+2022-09-26T11:02:28.9150360Z [command]/opt/homebrew/bin/git config --local --get remote.origin.url
+2022-09-26T11:02:28.9249010Z https://github.com/MohammadBnei/ga-exercice
+2022-09-26T11:02:28.9250890Z ##[group]Removing previously created refs, to avoid conflicts
+2022-09-26T11:02:28.9351020Z [command]/opt/homebrew/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2022-09-26T11:02:28.9451030Z refs/heads/main
+2022-09-26T11:02:28.9464940Z [command]/opt/homebrew/bin/git checkout --detach
+2022-09-26T11:02:28.9624980Z HEAD is now at 9ecb15a updated node-app
+2022-09-26T11:02:28.9725670Z [command]/opt/homebrew/bin/git rev-parse --symbolic-full-name --branches
+2022-09-26T11:02:28.9778540Z refs/heads/main
+2022-09-26T11:02:28.9879970Z [command]/opt/homebrew/bin/git branch --delete --force main
+2022-09-26T11:02:28.9980880Z Deleted branch main (was 9ecb15a).
+2022-09-26T11:02:28.9981770Z [command]/opt/homebrew/bin/git rev-parse --symbolic-full-name --remotes=origin
+2022-09-26T11:02:29.0080870Z refs/remotes/origin/main
+2022-09-26T11:02:29.0082070Z ##[endgroup]
+2022-09-26T11:02:29.0082560Z ##[group]Cleaning the repository
+2022-09-26T11:02:29.0100100Z [command]/opt/homebrew/bin/git clean -ffdx
+2022-09-26T11:02:29.2822480Z Removing node-app/node_modules/
+2022-09-26T11:02:29.2874800Z [command]/opt/homebrew/bin/git reset --hard HEAD
+2022-09-26T11:02:29.3001710Z HEAD is now at 9ecb15a updated node-app
+2022-09-26T11:02:29.3069210Z ##[endgroup]
+2022-09-26T11:02:29.3200360Z ##[group]Disabling automatic garbage collection
+2022-09-26T11:02:29.3201110Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2022-09-26T11:02:29.3201630Z ##[endgroup]
+2022-09-26T11:02:29.3216160Z ##[group]Setting up auth
+2022-09-26T11:02:29.3216830Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2022-09-26T11:02:29.3416730Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2022-09-26T11:02:29.5424140Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-09-26T11:02:29.5568920Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2022-09-26T11:02:29.7138760Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2022-09-26T11:02:29.7293290Z ##[endgroup]
+2022-09-26T11:02:29.7294220Z ##[group]Fetching the repository
+2022-09-26T11:02:29.7303360Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +15cec0c2987b28e10c8acad52fc1f2eb0e20810d:refs/remotes/origin/solution
+2022-09-26T11:02:30.2564080Z remote: Enumerating objects: 15, done.        
+2022-09-26T11:02:30.2565620Z remote: Counting objects:   6% (1/15)        
+2022-09-26T11:02:30.2565860Z remote: Counting objects:  13% (2/15)        
+2022-09-26T11:02:30.2566070Z remote: Counting objects:  20% (3/15)        
+2022-09-26T11:02:30.2566280Z remote: Counting objects:  26% (4/15)        
+2022-09-26T11:02:30.2566730Z remote: Counting objects:  33% (5/15)        
+2022-09-26T11:02:30.2566950Z remote: Counting objects:  40% (6/15)        
+2022-09-26T11:02:30.2567160Z remote: Counting objects:  46% (7/15)        
+2022-09-26T11:02:30.2567370Z remote: Counting objects:  53% (8/15)        
+2022-09-26T11:02:30.2567620Z remote: Counting objects:  60% (9/15)        
+2022-09-26T11:02:30.2567840Z remote: Counting objects:  66% (10/15)        
+2022-09-26T11:02:30.2568070Z remote: Counting objects:  73% (11/15)        
+2022-09-26T11:02:30.2568280Z remote: Counting objects:  80% (12/15)        
+2022-09-26T11:02:30.2568510Z remote: Counting objects:  86% (13/15)        
+2022-09-26T11:02:30.2568780Z remote: Counting objects:  93% (14/15)        
+2022-09-26T11:02:30.2569000Z remote: Counting objects: 100% (15/15)        
+2022-09-26T11:02:30.2569230Z remote: Counting objects: 100% (15/15), done.        
+2022-09-26T11:02:30.2569720Z remote: Compressing objects:  14% (1/7)        
+2022-09-26T11:02:30.2569970Z remote: Compressing objects:  28% (2/7)        
+2022-09-26T11:02:30.2570220Z remote: Compressing objects:  42% (3/7)        
+2022-09-26T11:02:30.2570440Z remote: Compressing objects:  57% (4/7)        
+2022-09-26T11:02:30.2570680Z remote: Compressing objects:  71% (5/7)        
+2022-09-26T11:02:30.2570910Z remote: Compressing objects:  85% (6/7)        
+2022-09-26T11:02:30.2571130Z remote: Compressing objects: 100% (7/7)        
+2022-09-26T11:02:30.2571370Z remote: Compressing objects: 100% (7/7), done.        
+2022-09-26T11:02:30.3010550Z remote: Total 9 (delta 1), reused 5 (delta 0), pack-reused 0        
+2022-09-26T11:02:30.3115430Z From https://github.com/MohammadBnei/ga-exercice
+2022-09-26T11:02:30.3116620Z  * [new ref]         15cec0c2987b28e10c8acad52fc1f2eb0e20810d -> origin/solution
+2022-09-26T11:02:30.3211670Z ##[endgroup]
+2022-09-26T11:02:30.3213520Z ##[group]Determining the checkout info
+2022-09-26T11:02:30.3214280Z ##[endgroup]
+2022-09-26T11:02:30.3215080Z ##[group]Checking out the ref
+2022-09-26T11:02:30.3221000Z [command]/opt/homebrew/bin/git checkout --progress --force -B solution refs/remotes/origin/solution
+2022-09-26T11:02:30.3374290Z Previous HEAD position was 9ecb15a updated node-app
+2022-09-26T11:02:30.3378360Z Switched to a new branch 'solution'
+2022-09-26T11:02:30.3387460Z branch 'solution' set up to track 'origin/solution'.
+2022-09-26T11:02:30.3400000Z ##[endgroup]
+2022-09-26T11:02:30.3581010Z [command]/opt/homebrew/bin/git log -1 --format='%H'
+2022-09-26T11:02:30.3718240Z '15cec0c2987b28e10c8acad52fc1f2eb0e20810d'

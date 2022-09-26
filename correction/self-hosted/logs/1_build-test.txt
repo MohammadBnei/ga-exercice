@@ -1,0 +1,406 @@
+2022-09-26T11:02:20.2839303Z Requested labels: self-hosted
+2022-09-26T11:02:20.2839382Z Job defined at: MohammadBnei/ga-exercice/.github/workflows/2.yml@refs/heads/solution
+2022-09-26T11:02:20.2839399Z Waiting for a runner to pick up this job...
+2022-09-26T11:02:20.4220147Z Job is about to start running on the runner: Mohas-MacBook-Pro (repository)
+2022-09-26T11:02:26.3839150Z Current runner version: '2.296.2'
+2022-09-26T11:02:26.3866430Z Runner name: 'Mohas-MacBook-Pro'
+2022-09-26T11:02:26.3867900Z Runner group name: 'Default'
+2022-09-26T11:02:26.3871650Z Machine name: 'Mohas-MacBook-Pro'
+2022-09-26T11:02:26.4041510Z ##[group]GITHUB_TOKEN Permissions
+2022-09-26T11:02:26.4043200Z Actions: write
+2022-09-26T11:02:26.4043550Z Checks: write
+2022-09-26T11:02:26.4043830Z Contents: write
+2022-09-26T11:02:26.4044100Z Deployments: write
+2022-09-26T11:02:26.4044350Z Discussions: write
+2022-09-26T11:02:26.4044600Z Issues: write
+2022-09-26T11:02:26.4044840Z Metadata: read
+2022-09-26T11:02:26.4045090Z Packages: write
+2022-09-26T11:02:26.4045330Z Pages: write
+2022-09-26T11:02:26.4045650Z PullRequests: write
+2022-09-26T11:02:26.4046000Z RepositoryProjects: write
+2022-09-26T11:02:26.4046290Z SecurityEvents: write
+2022-09-26T11:02:26.4046550Z Statuses: write
+2022-09-26T11:02:26.4046790Z ##[endgroup]
+2022-09-26T11:02:26.4052060Z Secret source: Actions
+2022-09-26T11:02:26.4054510Z Prepare workflow directory
+2022-09-26T11:02:26.5613420Z Prepare all required actions
+2022-09-26T11:02:26.5769470Z Getting action download info
+2022-09-26T11:02:26.9645670Z Download action repository 'actions/checkout@v3' (SHA:2541b1294d2704b0964813337f33b291d3f8596b)
+2022-09-26T11:02:28.4917880Z ##[group]Run actions/checkout@v3
+2022-09-26T11:02:28.4918730Z with:
+2022-09-26T11:02:28.4918930Z   repository: MohammadBnei/ga-exercice
+2022-09-26T11:02:28.4919500Z   token: ***
+2022-09-26T11:02:28.4919660Z   ssh-strict: true
+2022-09-26T11:02:28.4919830Z   persist-credentials: true
+2022-09-26T11:02:28.4920000Z   clean: true
+2022-09-26T11:02:28.4920200Z   fetch-depth: 1
+2022-09-26T11:02:28.4920350Z   lfs: false
+2022-09-26T11:02:28.4920510Z   submodules: false
+2022-09-26T11:02:28.4920690Z   set-safe-directory: true
+2022-09-26T11:02:28.4920860Z ##[endgroup]
+2022-09-26T11:02:28.8782840Z Syncing repository: MohammadBnei/ga-exercice
+2022-09-26T11:02:28.8790240Z ##[group]Getting Git version info
+2022-09-26T11:02:28.8791500Z Working directory is '/Users/moha/Code/action-runner/_work/ga-exercice/ga-exercice'
+2022-09-26T11:02:28.8792600Z [command]/opt/homebrew/bin/git version
+2022-09-26T11:02:28.8792850Z git version 2.37.3
+2022-09-26T11:02:28.8897470Z ##[endgroup]
+2022-09-26T11:02:28.9020560Z Copying '/Users/moha/.gitconfig' to '/Users/moha/Code/action-runner/_work/_temp/5333ecf4-43d0-4610-862c-cd9a1cb9cced/.gitconfig'
+2022-09-26T11:02:28.9021300Z Temporarily overriding HOME='/Users/moha/Code/action-runner/_work/_temp/5333ecf4-43d0-4610-862c-cd9a1cb9cced' before making global git config changes
+2022-09-26T11:02:28.9147070Z Adding repository directory to the temporary git global config as a safe directory
+2022-09-26T11:02:28.9148130Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/moha/Code/action-runner/_work/ga-exercice/ga-exercice
+2022-09-26T11:02:28.9150370Z [command]/opt/homebrew/bin/git config --local --get remote.origin.url
+2022-09-26T11:02:28.9249090Z https://github.com/MohammadBnei/ga-exercice
+2022-09-26T11:02:28.9250900Z ##[group]Removing previously created refs, to avoid conflicts
+2022-09-26T11:02:28.9351120Z [command]/opt/homebrew/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2022-09-26T11:02:28.9451100Z refs/heads/main
+2022-09-26T11:02:28.9464990Z [command]/opt/homebrew/bin/git checkout --detach
+2022-09-26T11:02:28.9625040Z HEAD is now at 9ecb15a updated node-app
+2022-09-26T11:02:28.9725750Z [command]/opt/homebrew/bin/git rev-parse --symbolic-full-name --branches
+2022-09-26T11:02:28.9778610Z refs/heads/main
+2022-09-26T11:02:28.9880030Z [command]/opt/homebrew/bin/git branch --delete --force main
+2022-09-26T11:02:28.9980950Z Deleted branch main (was 9ecb15a).
+2022-09-26T11:02:28.9981780Z [command]/opt/homebrew/bin/git rev-parse --symbolic-full-name --remotes=origin
+2022-09-26T11:02:29.0080960Z refs/remotes/origin/main
+2022-09-26T11:02:29.0082070Z ##[endgroup]
+2022-09-26T11:02:29.0082590Z ##[group]Cleaning the repository
+2022-09-26T11:02:29.0100130Z [command]/opt/homebrew/bin/git clean -ffdx
+2022-09-26T11:02:29.2823880Z Removing node-app/node_modules/
+2022-09-26T11:02:29.2874840Z [command]/opt/homebrew/bin/git reset --hard HEAD
+2022-09-26T11:02:29.3001780Z HEAD is now at 9ecb15a updated node-app
+2022-09-26T11:02:29.3069250Z ##[endgroup]
+2022-09-26T11:02:29.3200440Z ##[group]Disabling automatic garbage collection
+2022-09-26T11:02:29.3201120Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2022-09-26T11:02:29.3201630Z ##[endgroup]
+2022-09-26T11:02:29.3216190Z ##[group]Setting up auth
+2022-09-26T11:02:29.3216840Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2022-09-26T11:02:29.3416780Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2022-09-26T11:02:29.5424230Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-09-26T11:02:29.5568960Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2022-09-26T11:02:29.7140430Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2022-09-26T11:02:29.7293310Z ##[endgroup]
+2022-09-26T11:02:29.7294220Z ##[group]Fetching the repository
+2022-09-26T11:02:29.7303370Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +15cec0c2987b28e10c8acad52fc1f2eb0e20810d:refs/remotes/origin/solution
+2022-09-26T11:02:30.2564470Z remote: Enumerating objects: 15, done.        
+2022-09-26T11:02:30.2565620Z remote: Counting objects:   6% (1/15)        
+2022-09-26T11:02:30.2565860Z remote: Counting objects:  13% (2/15)        
+2022-09-26T11:02:30.2566080Z remote: Counting objects:  20% (3/15)        
+2022-09-26T11:02:30.2566280Z remote: Counting objects:  26% (4/15)        
+2022-09-26T11:02:30.2566740Z remote: Counting objects:  33% (5/15)        
+2022-09-26T11:02:30.2566960Z remote: Counting objects:  40% (6/15)        
+2022-09-26T11:02:30.2567160Z remote: Counting objects:  46% (7/15)        
+2022-09-26T11:02:30.2567380Z remote: Counting objects:  53% (8/15)        
+2022-09-26T11:02:30.2567630Z remote: Counting objects:  60% (9/15)        
+2022-09-26T11:02:30.2567840Z remote: Counting objects:  66% (10/15)        
+2022-09-26T11:02:30.2568070Z remote: Counting objects:  73% (11/15)        
+2022-09-26T11:02:30.2568290Z remote: Counting objects:  80% (12/15)        
+2022-09-26T11:02:30.2568510Z remote: Counting objects:  86% (13/15)        
+2022-09-26T11:02:30.2568780Z remote: Counting objects:  93% (14/15)        
+2022-09-26T11:02:30.2569010Z remote: Counting objects: 100% (15/15)        
+2022-09-26T11:02:30.2569230Z remote: Counting objects: 100% (15/15), done.        
+2022-09-26T11:02:30.2569720Z remote: Compressing objects:  14% (1/7)        
+2022-09-26T11:02:30.2569970Z remote: Compressing objects:  28% (2/7)        
+2022-09-26T11:02:30.2570220Z remote: Compressing objects:  42% (3/7)        
+2022-09-26T11:02:30.2570440Z remote: Compressing objects:  57% (4/7)        
+2022-09-26T11:02:30.2570680Z remote: Compressing objects:  71% (5/7)        
+2022-09-26T11:02:30.2570910Z remote: Compressing objects:  85% (6/7)        
+2022-09-26T11:02:30.2571130Z remote: Compressing objects: 100% (7/7)        
+2022-09-26T11:02:30.2571370Z remote: Compressing objects: 100% (7/7), done.        
+2022-09-26T11:02:30.3011290Z remote: Total 9 (delta 1), reused 5 (delta 0), pack-reused 0        
+2022-09-26T11:02:30.3115600Z From https://github.com/MohammadBnei/ga-exercice
+2022-09-26T11:02:30.3116630Z  * [new ref]         15cec0c2987b28e10c8acad52fc1f2eb0e20810d -> origin/solution
+2022-09-26T11:02:30.3211710Z ##[endgroup]
+2022-09-26T11:02:30.3213530Z ##[group]Determining the checkout info
+2022-09-26T11:02:30.3214280Z ##[endgroup]
+2022-09-26T11:02:30.3215080Z ##[group]Checking out the ref
+2022-09-26T11:02:30.3221010Z [command]/opt/homebrew/bin/git checkout --progress --force -B solution refs/remotes/origin/solution
+2022-09-26T11:02:30.3374340Z Previous HEAD position was 9ecb15a updated node-app
+2022-09-26T11:02:30.3378390Z Switched to a new branch 'solution'
+2022-09-26T11:02:30.3387470Z branch 'solution' set up to track 'origin/solution'.
+2022-09-26T11:02:30.3400010Z ##[endgroup]
+2022-09-26T11:02:30.3581070Z [command]/opt/homebrew/bin/git log -1 --format='%H'
+2022-09-26T11:02:30.3718290Z '15cec0c2987b28e10c8acad52fc1f2eb0e20810d'
+2022-09-26T11:02:30.4532190Z ##[group]Run npm ci
+2022-09-26T11:02:30.4532550Z [36;1mnpm ci[0m
+2022-09-26T11:02:30.4591000Z shell: /bin/bash -e {0}
+2022-09-26T11:02:30.4591660Z ##[endgroup]
+2022-09-26T11:02:30.8938870Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9047730Z npm WARN EBADENGINE   package: '@jest/console@29.0.3',
+2022-09-26T11:02:30.9049010Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9051450Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9051770Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9052020Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9052420Z npm WARN EBADENGINE   package: '@jest/core@29.0.3',
+2022-09-26T11:02:30.9052920Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9053290Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9053610Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9054680Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9055250Z npm WARN EBADENGINE   package: '@jest/environment@29.0.3',
+2022-09-26T11:02:30.9055650Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9056010Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9056350Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9056580Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9056950Z npm WARN EBADENGINE   package: '@jest/expect@29.0.3',
+2022-09-26T11:02:30.9057360Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9057710Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9058020Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9058300Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9065730Z npm WARN EBADENGINE   package: '@jest/expect-utils@29.0.3',
+2022-09-26T11:02:30.9066120Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9066490Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9066770Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9067010Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9067430Z npm WARN EBADENGINE   package: '@jest/fake-timers@29.0.3',
+2022-09-26T11:02:30.9067790Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9068130Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9068410Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9068680Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9069050Z npm WARN EBADENGINE   package: '@jest/globals@29.0.3',
+2022-09-26T11:02:30.9069400Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9069900Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9070180Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9070500Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9070800Z npm WARN EBADENGINE   package: '@jest/reporters@29.0.3',
+2022-09-26T11:02:30.9071170Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9071540Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9071840Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9072120Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9073310Z npm WARN EBADENGINE   package: '@jest/schemas@29.0.0',
+2022-09-26T11:02:30.9073680Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9074020Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9074300Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9074630Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9074970Z npm WARN EBADENGINE   package: '@jest/source-map@29.0.0',
+2022-09-26T11:02:30.9075780Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9076170Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9076400Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9076690Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9077100Z npm WARN EBADENGINE   package: '@jest/test-result@29.0.3',
+2022-09-26T11:02:30.9077490Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9077830Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9078130Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9078380Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9078730Z npm WARN EBADENGINE   package: '@jest/test-sequencer@29.0.3',
+2022-09-26T11:02:30.9079200Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9079630Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9079960Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9080240Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9080660Z npm WARN EBADENGINE   package: '@jest/transform@29.0.3',
+2022-09-26T11:02:30.9081110Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9081510Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9081840Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9082130Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9082500Z npm WARN EBADENGINE   package: '@jest/types@29.0.3',
+2022-09-26T11:02:30.9082840Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9083260Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9083520Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9083760Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9084140Z npm WARN EBADENGINE   package: 'babel-jest@29.0.3',
+2022-09-26T11:02:30.9084540Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9084930Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9085210Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9085480Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9085830Z npm WARN EBADENGINE   package: 'babel-plugin-jest-hoist@29.0.2',
+2022-09-26T11:02:30.9086230Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9086900Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9087180Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9087430Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9087780Z npm WARN EBADENGINE   package: 'babel-preset-jest@29.0.2',
+2022-09-26T11:02:30.9088170Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9088550Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9088790Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9089050Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9089400Z npm WARN EBADENGINE   package: 'diff-sequences@29.0.0',
+2022-09-26T11:02:30.9089750Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9090170Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9090440Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9090690Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9091180Z npm WARN EBADENGINE   package: 'expect@29.0.3',
+2022-09-26T11:02:30.9091590Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9091950Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9092180Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9092430Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9092790Z npm WARN EBADENGINE   package: 'jest@29.0.3',
+2022-09-26T11:02:30.9093290Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9093680Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9093940Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9094160Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9094520Z npm WARN EBADENGINE   package: 'jest-changed-files@29.0.0',
+2022-09-26T11:02:30.9094950Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9095310Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9095580Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9095830Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9096200Z npm WARN EBADENGINE   package: 'jest-circus@29.0.3',
+2022-09-26T11:02:30.9096550Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9096910Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9097190Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9097430Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9097780Z npm WARN EBADENGINE   package: 'jest-cli@29.0.3',
+2022-09-26T11:02:30.9098160Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9098500Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9098760Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9099020Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9099390Z npm WARN EBADENGINE   package: 'jest-config@29.0.3',
+2022-09-26T11:02:30.9099750Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9100110Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9100360Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9100580Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9100930Z npm WARN EBADENGINE   package: 'jest-diff@29.0.3',
+2022-09-26T11:02:30.9101290Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9101630Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9101900Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9102180Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9102510Z npm WARN EBADENGINE   package: 'jest-docblock@29.0.0',
+2022-09-26T11:02:30.9102890Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9103240Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9103500Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9103750Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9104090Z npm WARN EBADENGINE   package: 'jest-each@29.0.3',
+2022-09-26T11:02:30.9104450Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9104780Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9105050Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9105320Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9105660Z npm WARN EBADENGINE   package: 'jest-environment-node@29.0.3',
+2022-09-26T11:02:30.9106040Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9106380Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9106610Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9106880Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9107220Z npm WARN EBADENGINE   package: 'jest-get-type@29.0.0',
+2022-09-26T11:02:30.9107760Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9108080Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9108410Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9108660Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9108970Z npm WARN EBADENGINE   package: 'jest-haste-map@29.0.3',
+2022-09-26T11:02:30.9109330Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9109770Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9110040Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9110280Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9110640Z npm WARN EBADENGINE   package: 'jest-leak-detector@29.0.3',
+2022-09-26T11:02:30.9110980Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9111330Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9111620Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9111860Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9112200Z npm WARN EBADENGINE   package: 'jest-matcher-utils@29.0.3',
+2022-09-26T11:02:30.9112560Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9112970Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9113200Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9113480Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9113830Z npm WARN EBADENGINE   package: 'jest-message-util@29.0.3',
+2022-09-26T11:02:30.9114170Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9114560Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9114810Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9115050Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9115350Z npm WARN EBADENGINE   package: 'jest-mock@29.0.3',
+2022-09-26T11:02:30.9115700Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9116080Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9116310Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9116560Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9116900Z npm WARN EBADENGINE   package: 'jest-regex-util@29.0.0',
+2022-09-26T11:02:30.9117240Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9117620Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9117870Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9118100Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9118440Z npm WARN EBADENGINE   package: 'jest-resolve@29.0.3',
+2022-09-26T11:02:30.9118820Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9119170Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9119400Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9119640Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9120000Z npm WARN EBADENGINE   package: 'jest-resolve-dependencies@29.0.3',
+2022-09-26T11:02:30.9120390Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9120730Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9120980Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9121210Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9121530Z npm WARN EBADENGINE   package: 'jest-runner@29.0.3',
+2022-09-26T11:02:30.9121930Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9122260Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9122510Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9122760Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9123120Z npm WARN EBADENGINE   package: 'jest-runtime@29.0.3',
+2022-09-26T11:02:30.9123570Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9123940Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9124590Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9124840Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9125230Z npm WARN EBADENGINE   package: 'jest-snapshot@29.0.3',
+2022-09-26T11:02:30.9125570Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9126030Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9126290Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9126510Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9126870Z npm WARN EBADENGINE   package: 'jest-util@29.0.3',
+2022-09-26T11:02:30.9127220Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9127550Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9127840Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9128110Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9128430Z npm WARN EBADENGINE   package: 'jest-validate@29.0.3',
+2022-09-26T11:02:30.9128800Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9129140Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9129390Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9129640Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9129980Z npm WARN EBADENGINE   package: 'jest-watcher@29.0.3',
+2022-09-26T11:02:30.9130340Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9130660Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9130920Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9131190Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9131500Z npm WARN EBADENGINE   package: 'jest-worker@29.0.3',
+2022-09-26T11:02:30.9131860Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9132210Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9132440Z npm WARN EBADENGINE }
+2022-09-26T11:02:30.9132710Z npm WARN EBADENGINE Unsupported engine {
+2022-09-26T11:02:30.9133580Z npm WARN EBADENGINE   package: 'pretty-format@29.0.3',
+2022-09-26T11:02:30.9133940Z npm WARN EBADENGINE   required: { node: '^14.15.0 || ^16.10.0 || >=18.0.0' },
+2022-09-26T11:02:30.9134310Z npm WARN EBADENGINE   current: { node: 'v17.9.1', npm: '8.11.0' }
+2022-09-26T11:02:30.9134600Z npm WARN EBADENGINE }
+2022-09-26T11:02:31.5498700Z 
+2022-09-26T11:02:31.5500280Z added 278 packages, and audited 279 packages in 774ms
+2022-09-26T11:02:31.5501270Z 
+2022-09-26T11:02:31.5501420Z 30 packages are looking for funding
+2022-09-26T11:02:31.5501940Z   run `npm fund` for details
+2022-09-26T11:02:31.5502100Z 
+2022-09-26T11:02:31.5502220Z found 0 vulnerabilities
+2022-09-26T11:02:31.5691910Z ##[group]Run npm test
+2022-09-26T11:02:31.5692560Z [36;1mnpm test[0m
+2022-09-26T11:02:31.5739600Z shell: /bin/bash -e {0}
+2022-09-26T11:02:31.5739830Z ##[endgroup]
+2022-09-26T11:02:31.7705450Z 
+2022-09-26T11:02:31.7709460Z > app@1.0.0 test
+2022-09-26T11:02:31.7713460Z > jest
+2022-09-26T11:02:31.7714930Z 
+2022-09-26T11:02:32.3684470Z PASS ./index.spec.js
+2022-09-26T11:02:32.3686150Z   ✓ adds 1 + 2 to equal 3 (1 ms)
+2022-09-26T11:02:32.3686320Z 
+2022-09-26T11:02:32.3785070Z Test Suites: 1 passed, 1 total
+2022-09-26T11:02:32.3785400Z Tests:       1 passed, 1 total
+2022-09-26T11:02:32.3785660Z Snapshots:   0 total
+2022-09-26T11:02:32.3786240Z Time:        0.156 s
+2022-09-26T11:02:32.3786470Z Ran all test suites.
+2022-09-26T11:02:32.3966140Z ##[group]Run npm start
+2022-09-26T11:02:32.3966430Z [36;1mnpm start[0m
+2022-09-26T11:02:32.4001510Z shell: /bin/bash -e {0}
+2022-09-26T11:02:32.4001730Z ##[endgroup]
+2022-09-26T11:02:32.5856760Z 
+2022-09-26T11:02:32.5857340Z > app@1.0.0 start
+2022-09-26T11:02:32.5857960Z > node index.js
+2022-09-26T11:02:32.5858100Z 
+2022-09-26T11:02:32.6264320Z A very basic node js app
+2022-09-26T11:02:32.6726440Z moha
+2022-09-26T11:02:32.6726670Z 
+2022-09-26T11:02:32.6773200Z {
+2022-09-26T11:02:32.6774000Z   totalGb: '660.0',
+2022-09-26T11:02:32.6774380Z   usedGb: '14.4',
+2022-09-26T11:02:32.6774690Z   freeGb: '645.7',
+2022-09-26T11:02:32.6774980Z   usedPercentage: '2.2',
+2022-09-26T11:02:32.6775250Z   freePercentage: '97.8'
+2022-09-26T11:02:32.6775480Z }
+2022-09-26T11:02:33.6373560Z 33.5
+2022-09-26T11:02:33.6904800Z Post job cleanup.
+2022-09-26T11:02:33.8317020Z [command]/opt/homebrew/bin/git version
+2022-09-26T11:02:33.8467310Z git version 2.37.3
+2022-09-26T11:02:33.8526310Z Copying '/Users/moha/.gitconfig' to '/Users/moha/Code/action-runner/_work/_temp/5e827189-178d-4ebc-8ff8-99da9e7027ff/.gitconfig'
+2022-09-26T11:02:33.8547890Z Temporarily overriding HOME='/Users/moha/Code/action-runner/_work/_temp/5e827189-178d-4ebc-8ff8-99da9e7027ff' before making global git config changes
+2022-09-26T11:02:33.8551540Z Adding repository directory to the temporary git global config as a safe directory
+2022-09-26T11:02:33.8559300Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/moha/Code/action-runner/_work/ga-exercice/ga-exercice
+2022-09-26T11:02:33.8732380Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2022-09-26T11:02:33.8897330Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2022-09-26T11:02:34.0468060Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-09-26T11:02:34.0585250Z http.https://github.com/.extraheader
+2022-09-26T11:02:34.0618220Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+2022-09-26T11:02:34.0751270Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2022-09-26T11:02:34.2650750Z Cleaning up orphan processes
