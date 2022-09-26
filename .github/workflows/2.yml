@@ -10,6 +10,7 @@ jobs:
     # Without this line, the failing matrix job will prevent other from starting
     continue-on-error: ${{ matrix.experimental }}
     strategy:
+      fail-fast: true
       matrix:
         version: [14, 12]
         os: [ubuntu-latest]
