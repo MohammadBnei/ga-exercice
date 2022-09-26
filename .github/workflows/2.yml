@@ -2,6 +2,7 @@ name: Matrix 2
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   build-test:
