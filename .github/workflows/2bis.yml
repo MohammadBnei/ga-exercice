@@ -36,7 +36,7 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "joke-app-prod" #Must be unique in Heroku
+          heroku_app_name: "joke-app-staging" #Must be unique in Heroku
           heroku_email: "mohammadamine.banaei@protonmail.com"
           appdir: joke-app
           procfile: "web: JOKE_URL=${{secrets.JOKE_URL}} npm run start:prod"
