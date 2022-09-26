@@ -22,7 +22,7 @@ jobs:
         run: |
           npm ci
           npm test
-          npm build
+          npm run build
 
   deploy:
     runs-on: ubuntu-latest
