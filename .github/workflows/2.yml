@@ -1,18 +1,14 @@
-name: Matrix 2
+name: Docker image runner
 
 on:
   push:
 
 jobs:
   build-test:
-    strategy:
-      matrix:
-        version: [12, 14, 16]
-        os: [ubuntu-latest, windows-latest]
+    runs-on: ubuntu-latest
 
-    # Without this line, the failing matrix job will prevent other from starting
-    continue-on-error: true
-    runs-on: ${{ matrix.os }}
+    container:
+      image: node:16
 
     defaults:
       run:
@@ -20,9 +16,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.version }}
 
       - name: Install dependencies
         run: |
