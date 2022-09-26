@@ -1,0 +1,21 @@
+{
+    "npm": {
+        "publish": false
+    },
+    "git": {
+        "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"
+    },
+    "hooks": {
+        "after:bump": "npx auto-changelog -p"
+    },
+    "plugins": {
+        "@release-it/bumper": {
+            "in": "version.yml",
+            "out": "version.yml"
+        },
+        "@release-it/conventional-changelog": {
+            "preset": "angular",
+            "infile": "CHANGELOG-bis.md"
+        }
+    }
+}

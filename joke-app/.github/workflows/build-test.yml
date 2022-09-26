@@ -1,0 +1,34 @@
+name: Test workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: build-test
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "joke-app-iw2" #Must be unique in Heroku
+          heroku_email: "mohammadamine.banaei@protonmail.com"
+          procfile: "web: JOKE_URL=${{secrets.JOKE_URL}} npm run start:prod"

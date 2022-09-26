@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  joke: 
+    image: mohammaddocker/joke-app
+    ports:
+      - 8080:3000
