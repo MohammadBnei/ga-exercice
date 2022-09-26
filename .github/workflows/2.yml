@@ -32,4 +32,5 @@ jobs:
 
       - name: Install dependencies
         run: |
+          cd node-app
           npm ci
