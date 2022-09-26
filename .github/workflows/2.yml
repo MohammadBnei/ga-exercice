@@ -13,13 +13,13 @@ jobs:
       fail-fast: true
       matrix:
         version: [14, 12]
-        os: [ubuntu-latest]
+        os: ['ubuntu-latest']
         experimental: [false]
         include:
           # add matrix strategy with specific configuration
           - version: 12
             experimental: true
-          - os: windows-latest
+          - os: 'windows-latest'
             experimental: true
 
     steps:
