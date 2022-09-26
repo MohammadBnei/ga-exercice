@@ -12,7 +12,7 @@ jobs:
       matrix:
         version: [14, 16]
         os: [ubuntu-latest]
-        experimental: [true]
+        experimental: [false]
         include:
           # add matrix strategy with specific configuration
           - version: 12
