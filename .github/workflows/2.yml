@@ -5,7 +5,7 @@ on:
 
 jobs:
   build-test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     # Without this line, the failing matrix job will prevent other from starting
     continue-on-error: ${{ matrix.experimental }}
     strategy:
