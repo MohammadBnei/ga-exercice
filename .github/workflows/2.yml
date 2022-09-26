@@ -1,8 +1,7 @@
 name: Matrix 2
 
 on:
-  # Manual
-  workflow_dispatch:
+  push:
 
 jobs:
   build-test:
