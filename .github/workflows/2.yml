@@ -1,14 +1,11 @@
-name: Docker image runner
+name: Self hosted runner
 
 on:
   push:
 
 jobs:
   build-test:
-    runs-on: ubuntu-latest
-
-    container:
-      image: node:16
+    runs-on: self-hosted
 
     defaults:
       run:
@@ -16,7 +13,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
+      # No need to install nodejs as it is already installed locally
       - name: Install dependencies
         run: |
           npm ci
+      - name: Test
+        run: |
+          npm test
+      - name: Start the app
+        run: |
+          npm start
