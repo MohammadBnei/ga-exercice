@@ -1,0 +1,31 @@
+name: Matrix 2
+
+on:
+  # Manual
+  workflow_dispatch:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    # Without this line, the failing matrix job will prevent other from starting
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+      matrix:
+        version: [14, 12]
+        os: [ubuntu-latest]
+        include:
+          # add matrix strategy with specific configuration
+          - version: 12
+            experimental: true
+          - os: windows-latest
+            experimental: true
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.version }}
+
+      - name: Install dependencies
+        run: |
+          npm ci
