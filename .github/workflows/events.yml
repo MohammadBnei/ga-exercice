@@ -30,7 +30,7 @@ on:
   # Scheduled
   schedule:
     # Scheduled 1
-    - '*/1 * * * *'
+    - '*/5 * * * *'
     # Scheduled 2
     - '30 1-23/3 * * *'
     # Scheduled 3
