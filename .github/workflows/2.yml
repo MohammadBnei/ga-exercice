@@ -2,28 +2,21 @@ name: Matrix 2
 
 on:
   push:
-  workflow_dispatch:
 
 jobs:
   build-test:
-    # Without this line, the failing matrix job will prevent other from starting
     strategy:
-      fail-fast: true
       matrix:
-        version: [14, 16]
-        os: [ubuntu-latest]
-        experimental: [false]
-        include:
-          # add matrix strategy with specific configuration
-          - version: 12
-            os: [ubuntu-latest, windows-latest]
-            experimental: true
-          - os: windows-latest
-            experimental: true
+        version: [12, 14, 16]
+        os: [ubuntu-latest, windows-latest]
 
-    continue-on-error: ${{ matrix.experimental }}
+    # Without this line, the failing matrix job will prevent other from starting
+    continue-on-error: true
     runs-on: ${{ matrix.os }}
 
+    defaults:
+      run:
+        working-directory: node-app
 
     steps:
       - uses: actions/checkout@v3
@@ -33,5 +26,4 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd node-app
           npm ci
