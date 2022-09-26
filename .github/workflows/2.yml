@@ -6,21 +6,23 @@ on:
 
 jobs:
   build-test:
-    runs-on: ${{ matrix.os }}
     # Without this line, the failing matrix job will prevent other from starting
-    continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: true
       matrix:
         version: [14, 16]
-        os: ['ubuntu-latest', 'macos-latest']
+        os: [ubuntu-latest]
         experimental: [true]
         include:
           # add matrix strategy with specific configuration
           - version: 12
             experimental: true
-          - os: 'windows-latest'
+          - os: windows-latest
             experimental: true
+
+    continue-on-error: ${{ matrix.experimental }}
+    runs-on: ${{ matrix.os }}
+
 
     steps:
       - uses: actions/checkout@v3
