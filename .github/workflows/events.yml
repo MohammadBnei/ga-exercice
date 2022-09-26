@@ -17,7 +17,7 @@ on:
     paths:
       - "*.ts"
       # Push 6
-      - "$FOLDER/*"
+      - "node-app/*"
   
   # PR
   pull_request:
