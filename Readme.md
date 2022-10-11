@@ -1,4 +1,4 @@
-# Github Action Exercices
+# Github Action Exercices  
 
 ## Events
 [(Event List)](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
