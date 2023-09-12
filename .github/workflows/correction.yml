@@ -1,6 +1,9 @@
 name: Correction for 5iw2
 
 on:
+  push:
+    paths:
+      - "**.ts"
   # 1.1
   # push:
   #   branches:
@@ -17,9 +20,7 @@ on:
   #     - feat/**
 
   # 1.4
-  push:
-    paths:
-      - "**.ts"
+
 
 
 
