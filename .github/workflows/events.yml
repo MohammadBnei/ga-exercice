@@ -3,7 +3,7 @@ name: Events exercices
 on:
   push:
     branches:
-      - 'feat/*'
+      - 'feat/**'
 
 jobs:
   print-event:
