@@ -12,7 +12,7 @@ jobs:
       - name: Repository dispatch
         # This action lets you dispatch events for the current repository
         # These events are picked up by any workflow that implements the repository dispatch with the event name
-        uses: peter-evans/repository-dispatch@v1.1.2
+        uses: peter-evans/repository-dispatch@v2.1.2
         with:
           # A repo scoped Github Personal Access Token
           token: ${{ secrets.PAT }}
