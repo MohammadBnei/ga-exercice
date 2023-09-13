@@ -2,7 +2,7 @@ name: Events exercices
 
 on:
   schedule:
-    - cron: '5 * * * *'
+    - cron: '* 3 * * THUE'
 
 jobs:
   print-event:
