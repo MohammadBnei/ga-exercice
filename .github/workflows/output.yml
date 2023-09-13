@@ -1,6 +1,7 @@
 name: Output between jobs
 
-on: workflow_dispatch
+on:
+  push:
 
 jobs:
   job1:
