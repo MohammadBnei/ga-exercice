@@ -2,8 +2,8 @@ name: Events exercices
 
 on:
   push:
-    branches:
-      - 'feat/**'
+    paths:
+      - '**.ts'
 
 jobs:
   print-event:
