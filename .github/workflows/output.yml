@@ -6,7 +6,7 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    if: pull_request
+
 
     outputs:
       output1: ${{ steps.step1.outputs.var3 }}
@@ -16,8 +16,8 @@ jobs:
         run: echo "::set-output name=var3::${{github.ref}}"
 
   job2:
+    if: github.event_name !g= 'pull_request'
     runs-on: ubuntu-latest
-    if: pull_request == false
 
     needs: job1
 
