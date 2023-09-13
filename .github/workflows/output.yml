@@ -1,11 +1,12 @@
 name: Output between jobs
 
 on:
-  push:
+  pull_request:
 
 jobs:
   job1:
     runs-on: ubuntu-latest
+    if: pull_request
 
     outputs:
       output1: ${{ steps.step1.outputs.var3 }}
@@ -16,6 +17,7 @@ jobs:
 
   job2:
     runs-on: ubuntu-latest
+    if: !pull_request
 
     needs: job1
 
