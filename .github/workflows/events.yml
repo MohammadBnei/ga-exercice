@@ -2,7 +2,7 @@ name: Events exercices
 
 on:
   pull_request:
-    types: [opened]
+    types: [opened, closed]
 
 jobs:
   print-event:
