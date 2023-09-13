@@ -1,9 +1,8 @@
 name: Events exercices
 
 on:
-  push:
-    paths:
-      - node-app
+  pull_request:
+    types: [created]
 
 jobs:
   print-event:
