@@ -23,7 +23,7 @@ jobs:
           docker buildx build --platform linux/amd64,linux/arm64 -t aymanesgi/weeesh:latest .
 
       - name: Push de l'image Docker
-        run: docker push yourusername/yourimage:latest
+        run: docker push aymanesgi/weeesh:latest
 
       - name: Nettoyage
         run: docker buildx stop
