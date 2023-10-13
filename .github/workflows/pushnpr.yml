@@ -1,0 +1,20 @@
+name: Push & PR exercices
+
+on:
+  push:
+  pull_request:
+    types:
+      - opened
+      - closed
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+        - run: echo "I'm the first job"
+
+    second-job:
+        runs-on: ubuntu-latest
+        if: github.event_name != 'pull_request'
+        steps:
+        - run: echo "I'm the second job"

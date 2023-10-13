@@ -1,7 +1,79 @@
 name: Events exercices
 
-on:
-  workflow_dispatch:
+######### PUSH #########
+
+# 2. When you have a push on the branch "dev" only
+#on:
+#  push:
+#    branches:
+#      - dev
+
+# 3. When you have a push on any branch **except** "staging"
+#on:
+#  push:
+#    branches-ignore:
+#      - staging
+## OU branches: [!staging]
+
+# 4. When you have a push on any branch where the name starts with "feature"
+#on:
+#  push:
+#    branches:
+#    - feature/**
+# * n'est pas recursive, ** l'est
+
+# 5. When only the files with a ts extension have been modified
+#on:
+#  push:
+#    paths:
+#    - '**.ts'
+
+# 6. When a specific folder have been modified
+#on:
+#  push:
+#    paths:
+#    - 'joke-app/**'
+
+######### Pull request #########
+
+# 1. When someone **creates** a PR
+
+#on:
+#  pull_request:
+#      types:
+#        - opened
+
+# 2. When someone **closed** a PR
+
+#on:
+#  pull_request:
+#      types:
+#        - closed
+
+######### Scheduled #########
+
+# 1. Every 5 minutes
+
+#on:
+#  schedule:
+#    - cron: '*/5 * * * *'
+
+# 2. Every 1h 30m
+
+#on:
+#  schedule:
+#    - cron: '
+#      00 0-21/3 * * *
+#      30 1-22/3 * * *
+#    '
+
+# 3. Every Tuesday at 3am
+
+#on:
+#  schedule:
+#    - cron: '0 3 * * 2'
+
+
 
 jobs:
   print-event:
