@@ -2,7 +2,7 @@ name: Push 5
 
 on: 
   push:
-    branches:
+    paths:
     # * is anything but "/"
     # * does not handle recusrivity, ex: a change to app/index.ts  will not trigger this workflow but a change to ./index.ts will
       - "*.ts"
